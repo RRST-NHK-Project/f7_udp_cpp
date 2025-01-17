@@ -18,9 +18,25 @@ find_package(geometry_msgs REQUIRED)
 
 add_executable(nr25_mr src/NR25_MR.cpp)
 ament_target_dependencies(nr25_mr rclcpp std_msgs sensor_msgs geometry_msgs)
+add_executable(nr25_mr_omni src/NR25_MR_Omni.cpp)
+ament_target_dependencies(nr25_mr_omni rclcpp std_msgs sensor_msgs geometry_msgs)
+add_executable(nr25_mr_sd src/NR25_MR_SwerveDrive.cpp)
+ament_target_dependencies(nr25_mr_sd rclcpp std_msgs sensor_msgs geometry_msgs)
+
+add_executable(nr25_dr src/NR25_DR.cpp)
+ament_target_dependencies(nr25_dr rclcpp std_msgs sensor_msgs geometry_msgs)
+add_executable(nr25_dr_omni src/NR25_DR_Omni.cpp)
+ament_target_dependencies(nr25_dr_omni rclcpp std_msgs sensor_msgs geometry_msgs)
+add_executable(nr25_dr_sd src/NR25_DR_SwerveDrive.cpp)
+ament_target_dependencies(nr25_dr_sd rclcpp std_msgs sensor_msgs geometry_msgs)
 
 install(TARGETS
   nr25_mr
+  nr25_mr_omni
+  nr25_mr_sd
+  nr25_dr
+  nr25_dr_omni
+  nr25_dr_sd
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
