@@ -4,7 +4,6 @@ f7_udpのC++移植版です。現在移植作業中です。
 ## 実行環境 
 | OS | ROS | 
 | ---- | ---- | 
-| Ubuntu 22.04 LTS | Humble | 
 | Ubuntu 24.04 LTS | Jazzy | 
 
 ## *1 Mbed側の専用プログラム 
