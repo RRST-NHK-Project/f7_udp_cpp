@@ -16,7 +16,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-add_executable(nr25_mr src/NR25_MR.cpp)
+add_executable(nr25_mr src/NR25_MR.cpp src/UDP.cpp)
 ament_target_dependencies(nr25_mr rclcpp std_msgs sensor_msgs geometry_msgs)
 add_executable(nr25_mr_omni src/NR25_MR_Omni.cpp)
 ament_target_dependencies(nr25_mr_omni rclcpp std_msgs sensor_msgs geometry_msgs)
